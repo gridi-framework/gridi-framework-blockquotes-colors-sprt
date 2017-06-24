@@ -1,0 +1,7 @@
+@each $palette-color-prefix, $palette-color-variables in get-colors-palette($blockquote-colors-support-extra-colors-palette, $blockquote-colors-support-skip-colors-palette) {
+    .#{$colors-class-prefix}-#{$palette-color-prefix} blockquote,
+    blockquote.#{$colors-class-prefix}-#{$palette-color-prefix},
+    blockquote.blockquote-#{$palette-color-prefix} {
+        @include include-blockquote-colors(map_get($palette-color-variables, map_get($blockquote-colors-support-parser, border-color)));
+    }
+}
