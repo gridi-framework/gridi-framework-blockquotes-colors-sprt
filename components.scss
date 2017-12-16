@@ -1,6 +1,6 @@
 @each $palette-color-prefix, $palette-color-variables in get-colors-palette($blockquote-colors-support-extra-colors-palette, $blockquote-colors-support-skip-colors-palette) {
     .#{$colors-class-prefix}-#{$palette-color-prefix} blockquote,
     blockquote.#{$colors-class-prefix}-#{$palette-color-prefix} {
-        @include include-blockquote-colors(parse-map($blockquote-colors-support-parser, $palette-color-variables));
+        @include blockquote-colors-propertys(parse-map($blockquote-colors-support-parser, $palette-color-variables));
     }
 }
